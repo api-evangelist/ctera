@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.ctera.com/help/portal/6.0/api/
+docs: https://www.ctera.com/help/portal/6.0/api/CTERA%20Portal%20APIs/CTERA_Portal_API_Developer_Guide3.html
+summary:
+  types: [session-cookie]
+  api_key_in: []
+  oauth2_flows: []
+  note: >-
+    The CTERA Portal RESTful API uses form-based login that establishes an HTTP
+    session cookie; there is no OAuth2/OIDC or API-key scheme. The CTERA Python
+    SDK and both MCP servers authenticate with the same administrator
+    username/password credentials.
+schemes:
+  - name: portalSessionLogin
+    type: session-cookie
+    login:
+      endpoint: "{BASE_URL}/login"
+      method: POST
+      content_type: application/x-www-form-urlencoded
+      params:
+        - name: j_username
+          description: Administrator user account name.
+        - name: j_password
+          description: User password (transmitted over HTTPS).
+      on_success: Server sets HTTP session cookies that must be returned on all subsequent requests.
+    logout:
+      endpoint: "{BASE_URL}/logout"
+      method: POST
+      body: empty
+      result: Session terminated (200 OK).
+    session:
+      timeout_minutes: 30
+      note: Same HTTP client (cookie jar) must be reused across requests.
+    base_url_pattern: "https://<tenant>.ctera.com/admin/api"
+    failure_status: 403
+    sources:
+      - https://www.ctera.com/help/portal/6.0/api/
