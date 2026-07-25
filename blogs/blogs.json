@@ -1,0 +1,14 @@
+{
+  "repo": "ctera",
+  "feeds": [
+    {
+      "source": "https://www.ctera.com/support/",
+      "feed_url": "https://www.ctera.com/feed/",
+      "title": "",
+      "saved": 1,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 1,
+  "fetched": "2026-07-20T13:31:34Z"
+}

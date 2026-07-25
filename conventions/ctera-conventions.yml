@@ -1,0 +1,52 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.ctera.com/help/portal/6.0/api/CTERA%20Portal%20APIs/CTERA_Portal_API_Developer_Guide2.html
+description: >-
+  Cross-cutting request/response semantics for the CTERA Portal RESTful API,
+  captured from the CTERA REST APIs Help (Portal 6.0). The API exposes a uniform
+  object namespace where each object is addressed by a unique URI.
+authentication:
+  style: session-cookie
+  ref: authentication/ctera-authentication.yml
+base_url:
+  pattern: "https://<tenant>.ctera.com/admin/api"
+  note: A portal named portal.company.com is reached at https://portal.company.com/admin/api.
+resource_model:
+  style: uniform-object-namespace
+  addressing: Each object is addressed by a unique, hierarchical URI.
+  examples:
+    - /admin/api/users
+    - /admin/api/users/jsmith
+    - /admin/api/users/jsmith/lastName
+http_methods:
+  - method: GET
+    semantics: Retrieve an object.
+  - method: PUT
+    semantics: Replace (update) an object or an entire collection.
+  - method: POST
+    semantics: Invoke an extended method on an object.
+  - method: DELETE
+    semantics: Delete an object.
+idempotency:
+  supported: false
+  note: >-
+    No documented idempotency-key mechanism. PUT/GET/DELETE are naturally
+    idempotent by REST semantics, but the API publishes no idempotency-key
+    header or retry contract.
+pagination:
+  documented: false
+error_envelope:
+  style: http-status-plus-text
+  note: >-
+    Errors are conveyed via standard HTTP status codes; 400/500 include error
+    text in the response body. See errors/ctera-problem-types.yml.
+  ref: errors/ctera-problem-types.yml
+versioning:
+  scheme: portal-release-in-doc-path
+  note: API reference is versioned by Portal release (5.5, 6.0).
+  ref: lifecycle/ctera-lifecycle.yml
+rate_limiting:
+  documented: false
+webdav:
+  supported: true
+  note: The Portal also exposes WebDAV access for file operations (Java/WebDAV examples in the developer guide).

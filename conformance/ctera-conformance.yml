@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: derived
+source: https://www.ctera.com/help/portal/6.0/api/
+standards:
+  - id: rest
+    conforms: true
+    evidence: Uniform object namespace addressed by URIs with GET/PUT/POST/DELETE verbs.
+  - id: webdav
+    conforms: true
+    evidence: Portal exposes WebDAV file access (Java/WebDAV examples in the developer guide).
+  - id: http-status-errors
+    conforms: true
+    evidence: Standard HTTP status codes (400/401/403/404/500) with error text.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors are plain HTTP status + text, not application/problem+json.
+  - id: oauth2
+    conforms: false
+    evidence: Auth is form-login session-cookie based; no OAuth2 scheme.
+  - id: oidc
+    conforms: false
+  - id: scim
+    conforms: false
+  - id: fhir
+    conforms: false
+  - id: odata
+    conforms: false

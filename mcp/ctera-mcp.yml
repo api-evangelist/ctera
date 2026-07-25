@@ -1,0 +1,98 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://github.com/ctera
+description: >-
+  CTERA publishes two official, open-source (Apache-2.0) Model Context Protocol
+  servers that give AI agents file-and-folder management over the CTERA
+  Intelligent Data Platform: one for the CTERA Portal (global namespace) and one
+  for the CTERA Edge Filer. Both run locally via the uv runtime with stdio or
+  SSE transport, or as a Docker container, and authenticate with CTERA
+  credentials passed as environment variables.
+servers:
+  - name: mcp-ctera-core
+    title: MCP Server for CTERA Portal
+    repository: https://github.com/ctera/mcp-ctera-core
+    license: Apache-2.0
+    official: true
+    wraps: CTERA Portal API (global namespace file services)
+    transports: [stdio, sse, docker]
+    sse_endpoint: http://localhost:8000/sse
+    auth:
+      type: credentials
+      env_prefix: ctera.mcp.core.settings
+      settings: [host, user, password, scope, ssl]
+    tools:
+      - name: ctera_portal_browse_team_portal
+        description: Switch context to browse a specified team (tenant) portal.
+      - name: ctera_portal_browse_global_admin
+        description: Switch context to the global administration scope.
+      - name: ctera_portal_who_am_i
+        description: Return the currently authenticated user and domain.
+      - name: ctera_portal_list_dir
+        description: List the contents of a directory in the portal namespace.
+      - name: ctera_portal_create_directory
+        description: Create a single directory.
+      - name: ctera_portal_copy_item
+        description: Copy a file or folder to a new location.
+      - name: ctera_portal_move_item
+        description: Move a file or folder to a new location.
+      - name: ctera_portal_rename_item
+        description: Rename a file or folder.
+      - name: ctera_portal_delete_items
+        description: Delete one or more files or folders.
+      - name: ctera_portal_recover_items
+        description: Recover previously deleted items.
+      - name: ctera_portal_list_versions
+        description: List available versions of a file.
+      - name: ctera_portal_create_public_link
+        description: Create a public share link for an item.
+      - name: ctera_portal_get_permalink
+        description: Get a permalink for an item.
+      - name: ctera_portal_download_file
+        description: Download a file from the portal.
+      - name: ctera_portal_read_file
+        description: Read the contents of a file.
+      - name: ctera_portal_upload_from_content
+        description: Upload a file from in-memory content.
+      - name: ctera_portal_upload_file
+        description: Upload a file from a local path.
+      - name: ctera_portal_makedirs
+        description: Recursively create a directory tree.
+      - name: ctera_portal_walk_tree
+        description: Recursively walk a directory tree.
+  - name: mcp-ctera-edge
+    title: MCP Server for CTERA Edge
+    repository: https://github.com/ctera/mcp-ctera-edge
+    license: Apache-2.0
+    official: true
+    wraps: CTERA Edge Filer file management API
+    transports: [stdio, sse, docker]
+    sse_endpoint: http://localhost:8000/sse
+    auth:
+      type: credentials
+      env_prefix: ctera.mcp.edge.settings
+      settings: [host, user, password, ssl]
+    tools:
+      - name: ctera_edge_filer_who_am_i
+        description: Return the currently authenticated Edge Filer user.
+      - name: ctera_edge_filer_list_dir
+        description: List the contents of a directory on the Edge Filer.
+      - name: ctera_edge_filer_create_directory
+        description: Create a single directory.
+      - name: ctera_edge_filer_makedirs
+        description: Recursively create a directory tree.
+      - name: ctera_edge_filer_copy_item
+        description: Copy a file or folder.
+      - name: ctera_edge_filer_move_item
+        description: Move a file or folder.
+      - name: ctera_edge_filer_delete_item
+        description: Delete a file or folder.
+      - name: ctera_edge_upload_from_content
+        description: Upload a file from in-memory content.
+      - name: ctera_edge_filer_upload_file
+        description: Upload a file from a local path.
+      - name: ctera_edge_filer_download_file
+        description: Download a file from the Edge Filer.
+      - name: ctera_edge_filer_read_file
+        description: Read the contents of a file.

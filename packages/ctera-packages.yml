@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+source: https://pypi.org/project/cterasdk/
+packages:
+  - language: python
+    registry: pypi
+    name: cterasdk
+    url: https://pypi.org/project/cterasdk/
+    install: pip install cterasdk
+    version: 2.20.42
+    license: Apache-2.0
+    official: true
+    source_code: https://github.com/ctera/ctera-python-sdk
+    docs: https://ctera-python-sdk.readthedocs.io/en/latest/
+    description: >-
+      Official CTERA SDK for Python. Programmatically deploy, configure, and
+      manage the CTERA Intelligent Data Platform (Portal and Edge Filer),
+      including the Global File System, data migration jobs, notifications, and
+      Direct IO parallel retrieval.

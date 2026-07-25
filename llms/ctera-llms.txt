@@ -1,0 +1,36 @@
+# CTERA
+
+> CTERA operates the CTERA Intelligent Data Platform — a unified, edge-to-cloud global file system and data fabric for managing unstructured file data across distributed enterprises, with secure collaboration, cyber protection, global file locking, and AI-readiness. The platform is programmable through a RESTful Portal API, an official Python SDK, a CLI, and two official Model Context Protocol servers.
+
+## APIs
+
+- [CTERA Portal RESTful API (6.0)](https://www.ctera.com/help/portal/6.0/api/): RESTful management API over a uniform object namespace (users, devices, folders) addressed by URIs, using GET/PUT/POST/DELETE. Session-cookie authentication via form login.
+- [CTERA Portal API Developer Guide](https://www.ctera.com/help/portal/6.0/api/CTERA%20Portal%20APIs.html): Integration guide, object classes, and examples.
+
+## SDKs & Tools
+
+- [cterasdk (Python SDK)](https://pypi.org/project/cterasdk/): Official Apache-2.0 Python SDK — deploy, configure, and manage Portal and Edge Filer, including the Global File System, migration jobs, and Direct IO. `pip install cterasdk`
+- [cterasdk source](https://github.com/ctera/ctera-python-sdk): GitHub source and issues.
+- [cterasdk docs](https://ctera-python-sdk.readthedocs.io/en/latest/): Read the Docs reference.
+- [ctools](https://github.com/ctera/ctools): Official CLI/GUI toolbox to check and manage CTERA Edge Filers.
+
+## MCP Servers
+
+- [mcp-ctera-core](https://github.com/ctera/mcp-ctera-core): Official Apache-2.0 MCP server for the CTERA Portal — 20 file/folder tools (browse, list, upload/download, copy/move/rename, delete/recover, versions, public links) over stdio/SSE/Docker.
+- [mcp-ctera-edge](https://github.com/ctera/mcp-ctera-edge): Official Apache-2.0 MCP server for the CTERA Edge Filer — 11 file/folder tools over stdio/SSE/Docker.
+
+## Repo Artifacts
+
+- [Authentication](https://raw.githubusercontent.com/api-evangelist/ctera/refs/heads/main/authentication/ctera-authentication.yml)
+- [Conventions](https://raw.githubusercontent.com/api-evangelist/ctera/refs/heads/main/conventions/ctera-conventions.yml)
+- [Error catalog](https://raw.githubusercontent.com/api-evangelist/ctera/refs/heads/main/errors/ctera-problem-types.yml)
+- [Packages / SDK](https://raw.githubusercontent.com/api-evangelist/ctera/refs/heads/main/packages/ctera-packages.yml)
+- [MCP servers](https://raw.githubusercontent.com/api-evangelist/ctera/refs/heads/main/mcp/ctera-mcp.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/ctera/refs/heads/main/lifecycle/ctera-lifecycle.yml)
+
+## Docs
+
+- [Developer / API Help](https://www.ctera.com/help/portal/6.0/api/)
+- [Knowledge Base](https://kb.ctera.com/)
+- [Support](https://www.ctera.com/support/)
+- [Blog](https://www.ctera.com/blog/)

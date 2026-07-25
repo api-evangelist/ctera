@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/ctera/ctools
+cli:
+  name: ctools
+  description: >-
+    A toolbox of tasks to check and manage CTERA Edge Filers via CLI or GUI.
+    First-party CTERA utility built on the CTERA Python SDK for operating and
+    troubleshooting Edge Filer appliances at scale.
+  official: true
+  language: python
+  repository: https://github.com/ctera/ctools
+  releases: https://github.com/ctera/ctools-releases
+  install:
+    - method: source
+      command: git clone https://github.com/ctera/ctools
+    - method: binary
+      note: Prebuilt executables distributed via the ctools-releases repository.
+  surface:
+    - group: edge-filer
+      note: Check and manage CTERA Edge Filers (health checks, configuration, maintenance tasks) via CLI or GUI.
+  related_sdk: cterasdk

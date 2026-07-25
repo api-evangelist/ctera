@@ -1,22 +1,77 @@
 aid: ctera
 name: CTERA
-description: 'CTERA is a company surfaced as a portfolio company of bessemer-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: cloud. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  CTERA operates the CTERA Intelligent Data Platform, a unified edge-to-cloud
+  global file system and data fabric for managing unstructured file data across
+  distributed enterprises. The platform combines secure file collaboration,
+  cyber protection and ransomware defense, global file locking, enterprise
+  search, data classification, and AI-readiness (InsightAI) over a single global
+  namespace spanning edge, data center, and public cloud. CTERA is programmable
+  through a RESTful Portal management API (uniform object namespace addressed by
+  URIs), an official Apache-2.0 Python SDK (cterasdk), a CLI toolbox (ctools),
+  and two official Model Context Protocol servers (mcp-ctera-core and
+  mcp-ctera-edge) that give AI agents file-and-folder operations over the Portal
+  and Edge Filer. CTERA was surfaced as a portfolio company of Bessemer Venture
+  Partners.
 url: https://raw.githubusercontent.com/api-evangelist/ctera/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - bessemer-venture-partners
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.ctera.com/wp-content/uploads/2021/03/ctera-logo.png
 tags:
 - Company
 - Cloud
-apis: []
+- Storage
+- File Storage
+- Global File System
+- Data Management
+- Edge Computing
+- Cyber Protection
+- Hybrid Cloud
+- Unstructured Data
+apis:
+- name: CTERA Portal RESTful API
+  description: >-
+    RESTful management API for the CTERA Portal. Exposes a uniform object
+    namespace (users, devices, folders, and more) where each object is addressed
+    by a unique URI, using GET/PUT/POST/DELETE verbs. Authentication is
+    session-cookie based via a form login (j_username/j_password); errors are
+    conveyed with standard HTTP status codes.
+  humanURL: https://www.ctera.com/help/portal/6.0/api/
+  baseURL: https://portal.ctera.com/admin/api
+  tags:
+  - Files
+  - Storage
+  - Management
+  properties:
+  - type: APIReference
+    url: https://www.ctera.com/help/portal/6.0/api/
+  - type: Documentation
+    url: https://www.ctera.com/help/portal/6.0/api/CTERA%20Portal%20APIs.html
+  - type: Authentication
+    url: authentication/ctera-authentication.yml
+  - type: Conventions
+    url: conventions/ctera-conventions.yml
+  - type: ErrorCatalog
+    url: errors/ctera-problem-types.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +80,54 @@ maintainers:
 common:
 - type: Website
   url: https://www.ctera.com/
+- type: Documentation
+  url: https://www.ctera.com/help/portal/6.0/api/
+- type: APIReference
+  url: https://www.ctera.com/help/portal/6.0/api/CTERA%20Portal%20APIs.html
+- type: GettingStarted
+  url: https://www.ctera.com/help/portal/6.0/api/CTERA%20Portal%20APIs/CTERA_Portal_API_Developer_Guide2.html
+- type: HelpCenter
+  url: https://kb.ctera.com/
+- type: Support
+  url: https://www.ctera.com/support/
+- type: Blog
+  url: https://www.ctera.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/ctera
+- type: TermsOfService
+  url: https://www.ctera.com/eula/
+- type: PrivacyPolicy
+  url: https://www.ctera.com/privacy-policy/
+- type: Training
+  url: https://www.ctera.com/ctera-training/
+- type: Packages
+  url: packages/ctera-packages.yml
+- type: SDKs
+  url: packages/ctera-packages.yml
+- type: CLI
+  url: cli/ctera-cli.yml
+- type: MCPServer
+  url: mcp/ctera-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/ctera-llms.txt
+- type: Authentication
+  url: authentication/ctera-authentication.yml
+- type: Conventions
+  url: conventions/ctera-conventions.yml
+- type: ErrorCatalog
+  url: errors/ctera-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/ctera-lifecycle.yml
+- type: ChangeLog
+  url: changelog/ctera-changelog.yml
+- type: Conformance
+  url: conformance/ctera-conformance.yml
+- type: DomainSecurity
+  url: security/ctera-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: generated
+source: mcp/ctera-mcp.yml
+note: >-
+  CTERA publishes no OpenAPI, but it ships two official MCP servers whose tool
+  names are the real, grounded operation surface. These skills are grounded in
+  those verified tool names (see mcp/ctera-mcp.yml) plus the Portal REST auth and
+  error conventions.
+skills:
+  - file: ctera-portal-file-management.md
+    name: Manage and share files in the CTERA Portal
+    api: mcp/ctera-mcp.yml
+    server: mcp-ctera-core
+    operations:
+      - ctera_portal_who_am_i
+      - ctera_portal_list_dir
+      - ctera_portal_makedirs
+      - ctera_portal_upload_file
+      - ctera_portal_create_public_link
+      - ctera_portal_list_versions
+      - ctera_portal_delete_items
+      - ctera_portal_recover_items
+  - file: ctera-edge-file-operations.md
+    name: Perform file operations on a CTERA Edge Filer
+    api: mcp/ctera-mcp.yml
+    server: mcp-ctera-edge
+    operations:
+      - ctera_edge_filer_who_am_i
+      - ctera_edge_filer_list_dir
+      - ctera_edge_filer_makedirs
+      - ctera_edge_filer_upload_file
+      - ctera_edge_filer_download_file
+      - ctera_edge_filer_move_item
+      - ctera_edge_filer_delete_item

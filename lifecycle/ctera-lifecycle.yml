@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.ctera.com/help/portal/6.0/api/
+versioning:
+  scheme: portal-release
+  current: '6.0'
+  previous: ['5.5']
+  docs: https://www.ctera.com/help/portal/6.0/api/
+  note: >-
+    The CTERA Portal RESTful API is documented per Portal software release; the
+    reference path carries the release (e.g. /help/portal/6.0/api/). The Python
+    SDK (cterasdk) follows independent semantic versioning.
+sdk_versioning:
+  scheme: semver
+  current: 2.20.42
+  releases: https://github.com/ctera/ctera-python-sdk/releases
+  note: cterasdk documents that new versions may introduce breaking changes; review changelogs before upgrading in production.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal RFC 8594 Deprecation/Sunset header policy located.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []

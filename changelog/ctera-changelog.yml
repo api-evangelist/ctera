@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/ctera/ctera-python-sdk/releases
+scope: sdk
+scheme: semver
+current_version: 2.20.42
+note: >-
+  CTERA does not publish a dated public changelog for the Portal REST API; the
+  closest dated release cadence is the official Python SDK (cterasdk), which
+  ships frequently via GitHub Releases. Recent window only.
+entries:
+  - version: 2.20.42
+    date: '2026-07-03'
+  - version: 2.20.41
+    date: '2026-07-03'
+  - version: 2.20.40
+    date: '2026-06-22'
+  - version: 2.20.39
+    date: '2026-06-22'
+  - version: 2.20.38
+    date: '2026-06-14'
+  - version: 2.20.37
+    date: '2026-05-20'
