@@ -58,6 +58,10 @@ apis:
   humanURL: https://www.ctera.com/help/portal/6.0/api/
   baseURL: https://portal.ctera.com/admin/api
   tags:
+  - File
+  - Storage
+  - Management
+  tags_raw:
   - Files
   - Storage
   - Management
