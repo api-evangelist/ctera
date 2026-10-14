@@ -27,3 +27,16 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: ctera-microsoft-sentinel-own
+  label: Microsoft Sentinel (own)
+  partner: microsoft-sentinel
+  partner_name: Microsoft Sentinel (own)
+  category: Storage
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/CTERA
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
